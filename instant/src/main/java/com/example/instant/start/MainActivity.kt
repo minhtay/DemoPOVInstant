@@ -9,6 +9,7 @@ import com.example.base.util.viewBinding
 import com.example.instant.R
 import com.example.instant.databinding.ActivityMainBinding
 import com.example.instant.start.dialog.DownloadFullAppFragmentDialog
+import com.example.instant.start.dialog.ScanQRFragmentDialog
 
 class MainActivity : CommonActivity(R.layout.activity_main) {
 
@@ -16,12 +17,17 @@ class MainActivity : CommonActivity(R.layout.activity_main) {
     override fun afterViewCreated() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { view: View?, insets: WindowInsetsCompat ->
             val systemBar = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            binding.main.setPadding(0,systemBar.top, 0, systemBar.bottom)
+            binding.main.setPadding(0, systemBar.top, 0, systemBar.bottom)
             insets
         }
 
-        binding.btnCreateEvent.setOnClickListener {
-            DownloadFullAppFragmentDialog().showDialog(supportFragmentManager)
+        binding.apply {
+            btnCreateEvent.setOnClickListener {
+                DownloadFullAppFragmentDialog().showDialog(supportFragmentManager)
+            }
+            btnScanQR.setOnClickListener {
+                ScanQRFragmentDialog().showDialog(supportFragmentManager)
+            }
         }
     }
 

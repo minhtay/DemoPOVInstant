@@ -46,6 +46,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.camera.camera2)
     ksp(libs.hilt.compiler)
 
     // Gson

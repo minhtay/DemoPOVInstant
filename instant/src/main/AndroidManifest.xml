@@ -13,7 +13,10 @@
         <dist:fusing dist:include="true" />
     </dist:module>
 
-    <application>
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".start.MainActivity"
             android:exported="true">

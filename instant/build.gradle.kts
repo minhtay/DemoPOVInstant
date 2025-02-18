@@ -43,9 +43,9 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // Hilt
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
+
+    implementation(libs.vision.common)
+    implementation(libs.play.services.mlkit.barcode.scanning)
 
     // Gson
     implementation(libs.gson)
