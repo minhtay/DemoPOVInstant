@@ -15,8 +15,6 @@ import androidx.core.content.ContextCompat
 import com.example.base.ui.base.BaseBottomSheetDialogFragment
 import com.example.base.util.isPermissionGranted
 import com.example.instant.databinding.FragmentDialogScanQrBinding
-import com.google.mlkit.vision.barcode.BarcodeScanner
-import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
@@ -69,11 +67,6 @@ class ScanQRFragmentDialog :
                                 Log.d("TAGQR success", "QRcod: $code")
 
                                 for (barcode in code) {
-                                    val bounds = barcode.boundingBox
-                                    val corners = barcode.cornerPoints
-
-                                    val rawValue = barcode.rawValue
-
                                     val valueType = barcode.valueType
                                     // See API reference for complete list of supported types
                                     when (valueType) {

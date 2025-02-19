@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.ksp)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -47,6 +48,10 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     implementation(libs.androidx.camera.camera2)
+    implementation(libs.play.services.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.googleid)
     ksp(libs.hilt.compiler)
 
     // Gson
@@ -69,4 +74,5 @@ dependencies {
     // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.auth)
 }

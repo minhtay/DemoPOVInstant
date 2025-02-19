@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.dynamic.feature)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.ksp)
+    id("com.google.gms.google-services")
 }
 android {
     namespace = "com.example.instant"
